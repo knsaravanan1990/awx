@@ -1,0 +1,11 @@
+-
+  name: sample
+  hosts: all
+  tasks:
+     - shell: 'sleep 5'
+     - name: commands to execute
+       command: uptime;hostname;whoami
+       register: output
+     - name: print output
+       debug:
+         var: output.stdout
