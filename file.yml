@@ -1,2 +1,2 @@
 service: sshd
-action: restart
+action: restarted
