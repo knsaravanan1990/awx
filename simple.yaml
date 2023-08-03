@@ -2,7 +2,7 @@
 - name: Play1
   hosts: all
   vars:
-    name: This is testing AWX projects
+    name: This is testing AWX projects addding new features
   tasks:
      - name: print variables from cli
        debug:
