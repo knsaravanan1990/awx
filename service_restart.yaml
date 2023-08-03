@@ -1,13 +1,8 @@
 ---
 - name: Play1
   hosts: all
-  vars_prompt:
-    - name: service
-      prompt: "Enter the service name: "
-      private: no
-    - name: action
-      prompt: "Enter the action start/stop/restart : "
-      private: no
+  vars_files:
+    - file.yml
   tasks:
      - name: restart service
        service:
