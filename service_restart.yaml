@@ -1,6 +1,11 @@
-- name: Restart Service
+---
+- name: test
   hosts: all
+  vars_prompt:
+     - name: service
+       prompt: "enter the service name"
+       private: no
   tasks:
     service:
-       name: sshd
-       state: restarted
+       - name: service
+         state: restarted
