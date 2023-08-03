@@ -1,0 +1,6 @@
+- name: Restart Service
+  hosts: all
+  tasks:
+    service:
+       name: sshd
+       state: restarted
