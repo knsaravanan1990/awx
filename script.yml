@@ -1,0 +1,21 @@
+- name: copy and execute script
+  hosts: all
+  tasks:
+
+     - name: copy files from source to remote servers
+       copy:
+        src: /root/inter.py
+        dest: /tmp/
+
+     - name: changing permission
+       file:
+         path: /tmp/firefee/
+         state: directory
+         owner: root
+         group: root
+         mode: 0755
+         recurse: true
+
+     - name: Execute script for rhel/centos 6 servers
+       become: yes
+       shell: python3 /tmp/inter.py
