@@ -5,17 +5,9 @@
      - name: copy files from source to remote servers
        copy:
         src: /var/lib/awx/projects/inter.py
-        dest: /tmp/
-
-     - name: changing permission
-       file:
-         path: /tmp/inter.py
-         state: directory
-         owner: root
-         group: root
-         mode: 0755
-         recurse: true
-
+        dest: /home/vagrant/
+        mode: 0777
+        
      - name: Execute script for rhel/centos 6 servers
        become: yes
-       shell: python3 /tmp/inter.py
+       command: "python3 /home/vagrant/inter.py"
