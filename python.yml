@@ -5,8 +5,7 @@
     - name: run inter.py script
       script:
         executable: python3
-        cmd: /var/lib/awx/projects/inter.py
-        remote_src: True
+        cmd: /var/tmp/test.py
       register: cars_raw_output
     - name: print cars_raw_output
       debug:
