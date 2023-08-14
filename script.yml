@@ -1,5 +1,6 @@
 - name: copy and execute script
   hosts: all
+  remote_user: vagrant
   tasks:
 
      - name: copy files from source to remote servers
