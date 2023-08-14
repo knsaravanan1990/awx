@@ -1,6 +1,7 @@
 ---
 - name: run Python script
   hosts: all
+  become: true
   tasks:
     - name: run inter.py script
       script:
