@@ -4,7 +4,7 @@
 
      - name: copy files from source to remote servers
        copy:
-        src: /var/lib/awx/inter.py
+        src: /var/lib/awx/projects/inter.py
         dest: /tmp/
 
      - name: changing permission
