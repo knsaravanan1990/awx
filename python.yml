@@ -5,7 +5,7 @@
     - name: run inter.py script
       script:
         executable: python3
-        cmd: /var/tmp/test.py
+        cmd: test.py
       register: cars_raw_output
     - name: print cars_raw_output
       debug:
