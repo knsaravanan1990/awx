@@ -6,4 +6,4 @@
   tasks:
      - name: print variables from cli
        debug:
-         msg: "my name is {{ name }}"
+         msg: "{{ ansible_user_id }}"
